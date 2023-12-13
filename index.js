@@ -10,6 +10,9 @@ const employeeRoutes=require('./routes/employeeRoutes')
 const app = express();
 
 connectDB();
+app.get("/",(req,res)=>{
+  res.send("base api")
+})
 
 app.use(express.json());
 app.use(cors());
